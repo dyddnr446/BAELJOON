@@ -11,26 +11,26 @@
 // 입력
 // 첫째 줄에 3개의 눈이 빈칸을 사이에 두고 각각 주어진다.
 
-// const fs = require('fs');
-// const input = fs.readFileSync(0, "utf-8").toString().trim().split(" ").map(Number);
+const fs = require('fs');
+const input = fs.readFileSync(0, "utf-8").toString().trim().split(" ").map(Number);
 
 
-// let max_count = 1;
-// let max_value = 0;
+let max_count = 1;
+let max_value = 0;
 
-// for(let i of input) {
-//     let count = input.reduce((acc, cur)=>{
-//         return acc + (cur === i ? 1 : 0);
-//     },0);
+for(let i of input) {
+    let count = input.reduce((acc, cur)=>{
+        return acc + (cur === i ? 1 : 0);
+    },0);
 
-//     if(max_count<count){
-//         max_count = count;
-//         max_value = i;
-//     }else if(max_count===1 && max_value<i) max_value=i;
-// }
+    if(max_count<count){
+        max_count = count;
+        max_value = i;
+    }else if(max_count===1 && max_value<i) max_value=i;
+}
 
-// switch(max_count){
-//     case 1:console.log(max_value*100); break;
-//     case 2:console.log(1000+max_value*100);break;
-//     case 3:console.log(10000+max_value*1000);break;
-// }
+switch(max_count){
+    case 1:console.log(max_value*100); break;
+    case 2:console.log(1000+max_value*100);break;
+    case 3:console.log(10000+max_value*1000);break;
+}
