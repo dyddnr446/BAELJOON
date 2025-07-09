@@ -20,14 +20,13 @@
 // 각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.
 
 const fs = require('fs');
-const input = fs.readFileSync(0, "utf-8").toString().trim().split(/\r?\n/);
-const num = input.map((str)=>str.split(" ").map(Number));
-num.shift();
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
+let result = [];
+const T = Number(input[0]);
 
-for(let i of num){
-    let temp_sum=0;
-    for(let j of i){
-        temp_sum+=j;
-    }
-    console.log(temp_sum);
+for (let i = 1; i <= T; i++) {
+    const [A, B] = input[i].split(' ').map(Number);
+    result.push(A + B);
 }
+process.stdout.write(result.join('\n'));
+
