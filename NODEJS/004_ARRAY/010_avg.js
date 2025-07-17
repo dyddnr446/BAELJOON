@@ -10,4 +10,4 @@ const new_avg = new_nums.reduce((prev,current)=>{
     return prev+=current;
 }, 0) / nums.length;
 
-console.log(new_avg);   
+console.log(new_avg);  
