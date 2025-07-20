@@ -1,5 +1,5 @@
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
+const input = fs.readFileSync(0,"utf-8").toString().trim().split('\n');
 
 const [N, M] = input[0].split(' ').map(Number);
 let baskets = Array.from({ length: N }, (_, i) => i + 1);

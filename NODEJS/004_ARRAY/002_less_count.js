@@ -3,4 +3,3 @@ const num = input[0].split(" ").map(Number)[1];
 const nums = input[1].split(" ").map(Number)
 const result = nums.filter((n)=>n<num);
 console.log(result.join(" "));
-
