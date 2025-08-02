@@ -8,7 +8,6 @@ const nums = input[0].split("").map((v)=>{
 
 let result = 0;
 for(let i=0;i<nums.length;i++){
-    result+=nums[i]*Math.pow(base,i)
+    result+=nums[i]*Math.pow(base,i);
 }
-
 console.log(result);
