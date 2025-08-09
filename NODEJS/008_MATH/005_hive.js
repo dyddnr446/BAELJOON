@@ -5,7 +5,7 @@ function hive(num) {
 
     let count = 1; 
     let floor = 1;
-
+    
     while (true) {
         count += floor * 6;
         if (num <= count) {
