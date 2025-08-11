@@ -12,5 +12,6 @@ function rest(rest){
     return result;
 }
 
+
 input.shift();
 input.map((v)=>console.log(...rest(v)));
