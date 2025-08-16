@@ -5,7 +5,6 @@ function test(n1, n2){
     return "neither";
 }
 
-
 for(let i=0;i<input.length;i++){
     let [n1, n2] = input[i];
     if(!n1 || !n2)continue;
