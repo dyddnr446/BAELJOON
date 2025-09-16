@@ -20,4 +20,5 @@ function test(n1, n2){
     }
     console.log(mat);
 }
+
 test(input[0],input[1]);
