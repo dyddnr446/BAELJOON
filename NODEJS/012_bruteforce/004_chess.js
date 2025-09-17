@@ -1,24 +1,32 @@
-const input = require('fs').readFileSync(0,"utf-8").toString().split(" ").map(Number);
+const input = require('fs').readFileSync(0,"utf-8").toString().trim().split(/\r?\n/);
 
-function test(n1, n2){
-    let p = false;
-    let mat=[];
-    let raw=[];
-    for(let i=0;i<n2;i++){
-        for(let j=0;j<n1;j++){
-            if(!p){
-                raw.push("W");
-                p=!p;
-            }
-            else {
-                raw.push("B");
-                p=!p;
+const [row, col] = input[0].split(" ").map(Number);
+const mat = input.slice(1).map((v)=>v.split(""));
+
+function test(row, col, mat){
+    let count1 =0;
+    let count2 =0;
+    for(let i=0; i<row; i++){
+        for(let j=0; j<col; j++){
+            if((i + j) % 2 === 0){
+                if(mat[i][j] !== 'W'){
+                    count1++;
+                }
+                if(mat[i][j] !== 'B'){
+                    count2++;
+                }
+            } else {
+                if(mat[i][j] !== 'B'){
+                    count1++;
+                }
+                if(mat[i][j] !== 'W'){
+                    count2++;
+                }
             }
         }
-        mat.push(raw);
-        rar=[];
     }
-    console.log(mat);
-}
+    return Math.min(count1, count2);
 
-test(input[0],input[1]);
+}
+const result = test(row, col, mat);
+console.log(result);
