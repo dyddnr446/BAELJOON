@@ -15,7 +15,6 @@ function test(arr){
     return arr;
 }
 
-console.log("---")
 const uniq_arr = [...new Set(input)];
 
 console.log(test(uniq_arr).join("\n"));
