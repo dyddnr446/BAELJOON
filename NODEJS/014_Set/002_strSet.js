@@ -9,4 +9,5 @@ let cnt = 0;
 list.forEach((v)=>{
     if(pocket.has(v))cnt++;
 });
+
 console.log(cnt);
