@@ -7,6 +7,7 @@ const new_dict = new Map();
 dict.forEach((v,i)=>{
     new_dict.set(v,i+1);
 });
+
 ask.forEach((v)=>{
     if(!isNaN(Number(v)))console.log(dict[v-1]);
     else console.log(new_dict.get(v));
