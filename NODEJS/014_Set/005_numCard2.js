@@ -7,7 +7,6 @@ const check = input[3].split(" ").map(Number);
 
 const mHave = new Map();
 const result = [];
-
 for(const i of have){
     mHave.set(i,(mHave.get(i) || 0) +1 );
 }
