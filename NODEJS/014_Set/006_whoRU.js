@@ -11,7 +11,7 @@ for(const i of lis){
         result.push(i);
     }
 }
-result.sort((a,b)=>b.localeCompare(a));
+result.sort((a,b)=>a.localeCompare(b));
 console.log(cnt);
 result.forEach((v)=>{
     console.log(v);
