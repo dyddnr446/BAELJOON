@@ -11,10 +11,8 @@ function gcd(a,b){
     }
     return a;
 }
-
 const [A, B] = input[0];
 const [C, D] = input[1];
-
 const lcm = B * D /gcd(B,D);
 
 let boonza = (lcm/B)*A + (lcm/D)*C;
