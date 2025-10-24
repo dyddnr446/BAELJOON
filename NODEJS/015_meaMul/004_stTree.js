@@ -15,8 +15,6 @@ function gcd(a, b) {
 
 const GCD = diffs.reduce((pv, cv) => gcd(pv, cv));
 
-const inputSet = new Set(input);
-
 const minVal = Math.min(...input);
 const maxVal = Math.max(...input);
 
