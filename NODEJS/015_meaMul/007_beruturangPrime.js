@@ -10,7 +10,7 @@ function isPrime(n){
 
 input.forEach((v)=>{
     let cnt=0;
-    for(let i=v;i<=v*2;i++){
+    for(let i=v+1;i<=v*2;i++){
         if(isPrime(i))cnt++;
     }
     if(cnt>0)console.log(cnt);
