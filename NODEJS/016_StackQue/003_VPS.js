@@ -20,6 +20,9 @@ for (let i = 0; i < input.length; i++) {
     continue;
   }
 
+
+
+
   for (let j = 0; j < input[i].length; j++) {
     let chk = "";
     if (input[i][j] === "(") temp.push(1);
@@ -32,5 +35,4 @@ for (let i = 0; i < input.length; i++) {
   if (temp.length > 0 || flag) result.push("NO");
   else result.push("YES");
 }
-
 console.log(result.join('\n'));
