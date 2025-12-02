@@ -1,6 +1,6 @@
 const input = require('fs').readFileSync(0,"utf-8").toString().split(/\r?\n/).map(v=>v.split(""));
 
-input.map(lists=>{
+input.filter(lists=>{
     if(lists.join("")===".") 
     //소괄호 체크
     let temp1=[];
