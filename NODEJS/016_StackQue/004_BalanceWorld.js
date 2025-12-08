@@ -1,7 +1,7 @@
 const input = require('fs').readFileSync(0,"utf-8").toString().split(/\r?\n/).map(v=>v.split(""));
 
 input.filter(lists=>{
-    if(lists.join("")===".") 
+    if(lists.join("")===".")s 
     //소괄호 체크
     let temp1=[];
     //대괄호 체크
@@ -24,6 +24,7 @@ input.filter(lists=>{
             }
         }
     }
+
     if(flag===1)return "no";
     else return "yes";
 });
